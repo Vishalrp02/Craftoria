@@ -19,6 +19,8 @@ const client = new MongoClient(process.env.MONGO_URI, {
 });
 let db;
 
+console.log("MONGO_URI from Render =>", JSON.stringify(process.env.MONGO_URI));
+
 client
   .connect()
   .then(() => {
